@@ -38,30 +38,11 @@ const todoSlice = createSlice({
 
 })//todoSlice
 
+export const {addTask,deleteTask,toggleTask}=todoSlice.actions
+
+
 export const store=configureStore({
     reducer:{
         todo:todoSlice.reducer 
     }
 })
-
-
-
-export function createTask(text){
-    return {
-        type: "todo/addTask",
-        payload:text
-    }
-}
-
-export function deleteTask(id){
-    return {
-        type: "todo/deleteTask",
-        payload:id
-    }
-}
-export function toggleTask(id){
-    return {
-        type: "todo/toggleTask",
-        payload:id
-    }
-}

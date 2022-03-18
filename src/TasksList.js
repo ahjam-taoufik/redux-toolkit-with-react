@@ -6,8 +6,8 @@ const TasksList = () => {
 
   return (
     <>
-      {tasks.map((t) => (
-        <TaskItem task={t} key={t.id} />
+      {tasks.map((task) => (
+        <TaskItem task={task} key={task.id} />
       ))}
     </>
   );
