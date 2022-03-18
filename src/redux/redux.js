@@ -30,7 +30,7 @@ const todoSlice = createSlice({
         
         deleteTask:(state,action)=>{
             //  {type : "todo/deleteTask",payload:12}
-              state=state.filter(t=>t.id!=action.payload)
+              state=state.filter(t=>t.id!==action.payload)
             return state;
  
         }
@@ -43,3 +43,25 @@ export const store=configureStore({
         todo:todoSlice.reducer 
     }
 })
+
+
+
+export function createTask(text){
+    return {
+        type: "todo/addTask",
+        payload:text
+    }
+}
+
+export function deleteTask(id){
+    return {
+        type: "todo/deleteTask",
+        payload:id
+    }
+}
+export function toggleTask(id){
+    return {
+        type: "todo/toggleTask",
+        payload:id
+    }
+}
