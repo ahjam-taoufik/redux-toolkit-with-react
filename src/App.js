@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
-import { store } from './redux/redux';
+import { store } from './redux/store';
+
 import './styles.css';
 import TaskForm from './TaskForm';
 import TasksHeader from './TasksHeader';

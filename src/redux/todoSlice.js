@@ -1,7 +1,7 @@
-import {configureStore, createSlice} from '@reduxjs/toolkit'
+import { createSlice} from '@reduxjs/toolkit'
 
 
-const todoSlice = createSlice({
+export const todoSlice = createSlice({
     name: 'todo',
 
     initialState:[
@@ -40,9 +40,3 @@ const todoSlice = createSlice({
 
 export const {addTask,deleteTask,toggleTask}=todoSlice.actions
 
-
-export const store=configureStore({
-    reducer:{
-        todo:todoSlice.reducer 
-    }
-})
